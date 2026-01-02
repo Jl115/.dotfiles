@@ -1,0 +1,47 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Trash
+.Trashes
+
+# --- Linux / General ---
+*~
+*.swp
+*.bak
+.directory
+
+# --- Editors ---
+.vscode/
+.idea/
+
+# --- SSH SECURITY (Critical) ---
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pem
+*.key
+
+# Ignore known_hosts to avoid privacy leaks and merge conflicts
+known_hosts
+
+# --- TUCKR CONFIGURATION ---
+!Configs/ssh/.ssh/config
+!Configs/ssh/.ssh/authorized_keys
+!Configs/ssh/.ssh/*.pub
+
+!Secrets/**
+
+tuckr.log
+
+
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data

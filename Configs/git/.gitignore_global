@@ -1,0 +1,17 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+
+# Log files
+*.log
+
+**/20240312161710-ProdMigrationEmail.js
+**/generate_detailed_coordinates.sh
+**/trackerRoute.sh
+**/detailed_coordinates.txt
+**/.aider*

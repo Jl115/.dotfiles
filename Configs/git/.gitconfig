@@ -1,0 +1,29 @@
+[user]
+	email = joelbern006@gmail.com
+	name = jl115
+[pull]
+	rebase = true
+[core]
+	excludesfile = /Users/jldev115/.gitignore_global
+	pager = delta
+[branch]
+	autoSetupRebase = always
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = "code --wait --diff "
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[rerere]
+	enabled = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	line-numbers = true
+	side-by-side = true

@@ -1,0 +1,12 @@
+# Ignore all directories inside Vaults, but not files
+Vaults/*/
+
+# Existing rules (cleaned up)
+github-copilot
+gitleaks.json
+
+# Ignore all .DS_Store files in any directory
+**/.DS_Store
+
+.config/sketchybar.back
+

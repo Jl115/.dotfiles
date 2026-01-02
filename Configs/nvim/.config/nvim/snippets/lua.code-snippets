@@ -1,0 +1,136 @@
+{
+  // 1. Basic Module Pattern (The "Class" of Lua)
+  "Lua Module Boilerplate": {
+    "scope": "lua",
+    "prefix": "mod",
+    "body": [
+      "local M = {}",
+      "",
+      "function M.setup()",
+      "  ${1:-- init code}",
+      "end",
+      "",
+      "return M"
+    ],
+    "description": "Create a standard Lua module structure"
+  },
+  // 2. Lazy.nvim Plugin Spec (The "Stateless Widget" of Neovim Config)
+  "Lazy.nvim Plugin Spec": {
+    "scope": "lua",
+    "prefix": "lazyplugin",
+    "body": [
+      "{",
+      "  \"${1:author}/${2:repo}\",",
+      "  event = \"${3:VeryLazy}\",",
+      "  opts = {",
+      "    ${4:option} = ${5:true},",
+      "  },",
+      "  config = function(_, opts)",
+      "    require(\"${6:module_name}\").setup(opts)",
+      "  end,",
+      "}"
+    ],
+    "description": "Create a Lazy.nvim plugin specification"
+  },
+  // 3. Metatable Class (The "Stateful Widget" / OOP equivalent)
+  "Lua Metatable Class": {
+    "scope": "lua",
+    "prefix": "class",
+    "body": [
+      "---@class ${1:ClassName}",
+      "local ${1:ClassName} = {}",
+      "${1:ClassName}.__index = ${1:ClassName}",
+      "",
+      "---@return ${1:ClassName}",
+      "function ${1:ClassName}.new(${2:args})",
+      "  local self = setmetatable({}, ${1:ClassName})",
+      "  self.${3:prop} = ${2:args}",
+      "  return self",
+      "end",
+      "",
+      "function ${1:ClassName}:method()",
+      "  ${0}",
+      "end"
+    ],
+    "description": "Create a Class using Lua metatables"
+  },
+  // 4. Protected Call (The "Try/Catch" equivalent)
+  "Lua Pcall (Try Catch)": {
+    "scope": "lua",
+    "prefix": "lpcall",
+    "body": [
+      "local status, err = pcall(function()",
+      "  ${1:-- risky code}",
+      "end)",
+      "",
+      "if not status then",
+      "  vim.notify(\"Error in ${TM_FILENAME_BASE}: \" .. tostring(err), vim.log.levels.ERROR)",
+      "end"
+    ],
+    "description": "Safe protected call with Neovim notification on error"
+  },
+  // 5. Neovim Keymap (The "Button/Action" equivalent)
+  "Neovim Keymap": {
+    "scope": "lua",
+    "prefix": "map",
+    "body": [
+      "vim.keymap.set(\"${1:n}\", \"${2:<leader>key}\", function()",
+      "  ${3:print('clicked')}",
+      "end, { desc = \"${4:Description}\" })"
+    ],
+    "description": "Set a Neovim keymap"
+  },
+  // 6. Neovim Autocmd (The "StreamBuilder/Listener" equivalent)
+  "Neovim Autocmd": {
+    "scope": "lua",
+    "prefix": "autocmd",
+    "body": [
+      "vim.api.nvim_create_autocmd(\"${1:BufWritePre}\", {",
+      "  pattern = \"${2:*}\",",
+      "  callback = function(ev)",
+      "    ${3:-- code}",
+      "  end,",
+      "  desc = \"${4:Description}\",",
+      "})"
+    ],
+    "description": "Create an autocommand listener"
+  },
+  // 7. Iterate Pairs (The "ListView.builder" equivalent)
+  "Lua Pair Loop": {
+    "scope": "lua",
+    "prefix": "forp",
+    "body": [
+      "for ${1:key}, ${2:value} in pairs(${3:table}) do",
+      "  ${0:print(key, value)}",
+      "end"
+    ],
+    "description": "Iterate over a table (dictionary)"
+  },
+  // 8. Debug Print Green (Your "printS")
+  "Print Structured Green": {
+    "scope": "lua",
+    "prefix": "printS",
+    "body": [
+      "print(string.format(\"\\x1b[32m${1:Label} -------------------- %s\\x1b[0m\", vim.inspect(${1:Var})))"
+    ],
+    "description": "Structured print with green color and object inspection"
+  },
+  // 9. Debug Print Red (Your "printSr")
+  "Print Structured Red": {
+    "scope": "lua",
+    "prefix": "printSr",
+    "body": [
+      "print(string.format(\"\\x1b[31m${1:Label} -------------------- %s\\x1b[0m\", vim.inspect(${1:Var})))"
+    ],
+    "description": "Structured print with red color and object inspection"
+  },
+  // 10. TODO Comment
+  "Lua TODO": {
+    "scope": "lua",
+    "prefix": "todo",
+    "body": [
+      "-- TODO: (${1:User}) ${2:Task}"
+    ],
+    "description": "Create a todo comment"
+  }
+}
