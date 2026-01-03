@@ -41,3 +41,4 @@ alias vp-kube="ssh -L 6443:127.0.0.1:6443 root@31.97.36.220 -p 58291"
 
 # Dotfiles
 alias dotfiles="tuckr"
+alias cdDotfiles="cd ~/.dotfiles"
