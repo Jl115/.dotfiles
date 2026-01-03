@@ -1,0 +1,65 @@
+tap "oven-sh/bun"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Audit git repos for secrets
+brew "gitleaks"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Client library for huggingface.co hub
+brew "huggingface-cli"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Manage multiple Node.js versions
+brew "nvm"
+# Development kit for the Java programming language
+brew "openjdk"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
+# Rust toolchain installer
+brew "rustup"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+# Application uninstaller
+cask "appcleaner"
+# Chromium based browser
+cask "arc"
+# Live wallpaper app
+cask "backdrop"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# Menu bar icon organiser
+cask "bartender"
+# Node-based image, video and audio generator
+cask "comfyui"
+# Slicer and cloud services for some Creality FDM 3D printers
+cask "creality-print"
+# UI toolkit for building applications for mobile, web and desktop
+cask "flutter"
+cask "font-jetbrains-mono-nerd-font"
+# Desktop automation application
+cask "hammerspoon"
+# Keyboard shortcuts for every button on your screen
+cask "homerow"
+# Convert your caps lock key or any of your modifier keys to the hyper key
+cask "hyperkey"
+# GPU-based terminal emulator
+cask "kitty"
+# Adaptive brightness for external displays
+cask "lunar"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Virtual reality content platform
+cask "sidequest"
+cargo "tuckr"

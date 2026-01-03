@@ -28,9 +28,7 @@ id_ed25519
 known_hosts
 
 # --- TUCKR CONFIGURATION ---
-!Configs/ssh/.ssh/config
-!Configs/ssh/.ssh/authorized_keys
-!Configs/ssh/.ssh/*.pub
+Configs/ssh/.ssh/
 
 !Secrets/**
 

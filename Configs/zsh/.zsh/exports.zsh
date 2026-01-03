@@ -28,6 +28,9 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# RUST
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+
 
 # Node / NVM
 export NVM_DIR="$HOME/.nvm"

@@ -38,3 +38,6 @@ alias spot-dev="ssh debian@dev.app.spotpilot.ch"
 alias spot-test="ssh debian@test.app.spotpilot.ch"
 alias vp-log="ssh -p 58291 root@31.97.36.220"
 alias vp-kube="ssh -L 6443:127.0.0.1:6443 root@31.97.36.220 -p 58291"
+
+# Dotfiles
+alias dotfiles="tuckr"
