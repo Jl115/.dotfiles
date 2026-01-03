@@ -30,6 +30,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # RUST
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
 
 
 # Node / NVM

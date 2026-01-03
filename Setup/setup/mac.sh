@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configuration Variables ---
-WALLPAPER_PATH="../wallpaper/denji.jpg"
+WALLPAPER_PATH="./wallpaper/denji.jpg"
 DOCK_SIZE=12          # Base size of icons
 MAGNIFICATION=true    # Enable magnification (true/false)
 MAGNIFICATION_SIZE=45 # How big icons get when hovered (must be larger than DOCK_SIZE)

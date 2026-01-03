@@ -16,6 +16,8 @@ source ./install/brew.sh
 echo ">>> Installing Brewfile dependencies..."
 brew bundle --file=./Brewfile
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 #Decrypt Secrets
 echo ">>> Decrypting SSH folder..."
 attempt=0
@@ -23,7 +25,7 @@ max_attempts=3
 success=false
 
 while [ $attempt -lt $max_attempts ]; do
-  if tuckr ssh decrypt; then
+  if tuckr decrypt ssh; then
     success=true
     break
   else
@@ -46,7 +48,7 @@ source ./helpers/enable-ssh-agent.sh
 
 #Link Dotfiles
 echo ">>> Symlinking files..."
-tuckr add * -f
+tuckr add \* -f
 
 #Mac Setup
 echo ">>> Configuring macOS defaults..."
