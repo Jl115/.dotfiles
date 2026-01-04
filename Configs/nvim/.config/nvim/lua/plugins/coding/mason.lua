@@ -28,6 +28,8 @@ return {
       "js-debug-adapter",
       "java-debug-adapter",
       "java-test",
+      -- Others
+      "sonarlint-language-server",
     },
   },
 }
